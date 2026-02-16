@@ -1,0 +1,106 @@
+.services-section {
+    background-color: var(--color-bg-primary);
+    padding: var(--spacing-xxl) 0;
+}
+
+.services-grid-layout {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: var(--spacing-xl);
+}
+
+.section-header {
+    margin-bottom: var(--spacing-xxl);
+}
+
+.section-title {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 700;
+    color: var(--color-text-primary);
+    letter-spacing: -0.04em;
+    line-height: 1;
+}
+
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 0;
+    border-top: 1px solid var(--color-border);
+}
+
+.service-card {
+    padding: var(--spacing-xl);
+    transition: all var(--transition-smooth);
+    background: transparent;
+    border-bottom: 1px solid var(--color-border);
+    border-right: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 350px;
+}
+
+.service-card:nth-child(3n) {
+    border-right: none;
+}
+
+.service-card:hover {
+    background-color: var(--color-bg-secondary);
+}
+
+.service-header {
+    margin-bottom: var(--spacing-lg);
+}
+
+.service-index {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-sm);
+    font-family: monospace;
+}
+
+.service-title {
+    font-size: clamp(1.8rem, 2.5vw, 2.2rem);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.service-desc {
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-xl);
+    line-height: 1.6;
+    font-size: 1.1rem;
+    max-width: 90%;
+}
+
+.service-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+}
+
+.tag {
+    font-size: 0.75rem;
+    padding: 6px 14px;
+    background-color: transparent;
+    border: 1px solid var(--color-border);
+    border-radius: 99px;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .tag {
+    border-color: var(--color-accent-primary);
+    color: var(--color-accent-primary);
+}
+
+@media (max-width: 1024px) {
+    .service-card {
+        border-right: none;
+    }
+}
